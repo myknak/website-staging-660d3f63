@@ -109,7 +109,7 @@ export default function Shop() {
     <main className="min-h-screen pt-24 pb-16">
       <CollectionHeader />
       
-      <div className="container-custom mt-12">
+      <div className="container-custom mt-12 px-4 md:px-8 py-8 md:py-12">
         <div className="flex flex-col md:flex-row gap-8">
           <FilterSidebar
             activeFilters={activeFilters}

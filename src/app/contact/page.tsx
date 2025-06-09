@@ -29,7 +29,7 @@ export default function Contact() {
   };
 
   return (
-    <main className="min-h-screen pt-16 pb-16">
+    <main className="min-h-screen pt-24 pb-16">
       <ContactHeader />
       
       <div className="container-custom">
