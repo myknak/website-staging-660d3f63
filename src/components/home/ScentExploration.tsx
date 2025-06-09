@@ -67,7 +67,7 @@ export default function ScentExploration() {
                 key={family}
                 className={`px-6 py-3 text-sm uppercase tracking-wider font-medium transition-all ${
                   activeTab === family
-                    ? "bg-primary text-accent"
+                    ? "bg-primary text-[#D4AF37]" // Using direct HEX color to ensure it works
                     : "bg-white text-primary hover:bg-gray-100"
                 }`}
                 onClick={() => setActiveTab(family)}

@@ -1,19 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: process.env.NODE_ENV == 'production' ? 'export' : 'standalone',
+  output: 'standalone',
   images: {
     formats: ['image/avif', 'image/webp'],
-    unoptimized: true, // Required for static export
+    unoptimized: true,
   },
   experimental: {
     optimizeCss: true,
-  },
+  }
 }
 
-if (process.env.NODE_ENV == 'production') {
-  module.exports = nextConfig
-} else {
-  const { withJsxLoc } = require('@builder.io/nextjs-plugin-jsx-loc')
-  module.exports = withJsxLoc({}, nextConfig)
-}
+module.exports = nextConfig
