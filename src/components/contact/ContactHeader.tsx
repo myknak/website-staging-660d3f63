@@ -1,6 +1,6 @@
 export default function ContactHeader() {
   return (
-    <section className="relative">
+    <section className="relative mb-16">
       <div className="h-64 md:h-80 overflow-hidden">
         <img
           src="https://d2jb2caottkk25.cloudfront.net/nox.boutique/contact/contactheader/contactheader.jpg"

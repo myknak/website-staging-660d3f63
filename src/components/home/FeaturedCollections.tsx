@@ -61,7 +61,7 @@ export default function FeaturedCollections() {
                 <p className="mb-4">{collection.description}</p>
                 <Link
                   href={`/shop?collection=${collection.id}`}
-                  className="inline-block bg-white text-primary py-2 px-4 uppercase text-sm tracking-wider font-medium transition-transform duration-300 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
+                  className="inline-block bg-white text-black py-2 px-4 uppercase text-sm tracking-wider font-medium transition-transform duration-300 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
                 >
                   Shop Collection
                 </Link>

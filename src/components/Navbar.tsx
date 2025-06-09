@@ -10,25 +10,8 @@ import { IconCart, IconSearch, IconMenu, IconClose } from "./icons";
 export default function Navbar() {
   const pathname = usePathname();
   const { cartItems } = useCart();
-  const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
-
-  useEffect(() => {
-    // Set initial scrolled state to true to ensure the navbar is visible on page load
-    setScrolled(true);
-    
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -42,7 +25,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`nav ${scrolled ? "nav-scrolled" : ""}`}>
+      <nav className="nav">
         <div className="nav-container container-custom">
           <Link href="/" className="nav-logo">
             NOX BOUTIQUE

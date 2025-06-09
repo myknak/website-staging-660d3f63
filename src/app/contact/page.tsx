@@ -29,10 +29,10 @@ export default function Contact() {
   };
 
   return (
-    <main className="min-h-screen pt-24 pb-16">
+    <main className="min-h-screen pt-16 pb-16">
       <ContactHeader />
       
-      <div className="container-custom mt-12">
+      <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <ContactForm onSubmit={handleFormSubmit} submitted={formSubmitted} />
           <StoreInfo />

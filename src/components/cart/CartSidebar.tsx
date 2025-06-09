@@ -8,7 +8,7 @@ interface CartSidebarProps {
 }
 
 export default function CartSidebar({ isOpen, onClose }: CartSidebarProps) {
-  const { cartItems, updateQuantity, removeFromCart, getCartTotal } = useCart();
+  const { cartItems, updateQuantity, removeFromCart, clearCart, getCartTotal } = useCart();
 
   return (
     <div
@@ -113,6 +113,12 @@ export default function CartSidebar({ isOpen, onClose }: CartSidebarProps) {
               <span>Shipping</span>
               <span>Calculated at checkout</span>
             </div>
+            <button 
+              onClick={clearCart}
+              className="w-full py-2 mb-3 border border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition-colors"
+            >
+              Clear Cart
+            </button>
             <button className="w-full py-3 bg-primary text-white hover:bg-opacity-90 transition-colors mb-2">
               Checkout
             </button>
