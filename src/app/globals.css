@@ -149,14 +149,16 @@ a {
 }
 
 .btn-secondary {
-  background-color: transparent;
-  color: var(--primary);
-  border: 1px solid var(--primary);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--background);
+  border: 1px solid var(--background);
+  backdrop-filter: blur(4px);
 }
 
 .btn-secondary:hover {
   background-color: var(--primary);
   color: var(--background);
+  border-color: var(--primary);
 }
 
 /* Fix for white buttons with white text */
@@ -168,6 +170,11 @@ a.border-primary:hover {
 /* Fix for white background buttons */
 .bg-white {
   color: var(--text) !important; /* Force black text on white backgrounds */
+}
+
+/* Add text-accent class for gold text color */
+.text-accent {
+  color: var(--accent) !important;
 }
 
 .section-padding {
@@ -195,10 +202,6 @@ a.border-primary:hover {
   width: 60px;
   height: 2px;
   background-color: var(--accent);
-}
-
-.text-accent {
-  color: var(--accent);
 }
 
 /* Product card styles */

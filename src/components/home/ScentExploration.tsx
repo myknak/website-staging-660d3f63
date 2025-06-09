@@ -7,6 +7,7 @@ type ScentFamily = {
   description: string;
   notes: string[];
   mood: string;
+  image: string; // Added image property
 };
 
 // Define the type for the scentFamilies object
@@ -23,24 +24,28 @@ export default function ScentExploration() {
       description: "Deep, warm scents with notes of cedar, sandalwood, and amber that create a grounding atmosphere.",
       notes: ["Cedar", "Sandalwood", "Amber", "Vetiver", "Patchouli"],
       mood: "Grounding, Comforting, Sophisticated",
+      image: "https://d2jb2caottkk25.cloudfront.net/nox.boutique/scentguide/scentfamilies/woodyfamily.jpg",
     },
     floral: {
       title: "Floral",
       description: "Elegant, romantic fragrances featuring rose, jasmine, and lavender that bring nature indoors.",
       notes: ["Rose", "Jasmine", "Lavender", "Lily", "Peony"],
       mood: "Romantic, Uplifting, Fresh",
+      image: "https://d2jb2caottkk25.cloudfront.net/nox.boutique/scentguide/scentfamilies/floralfamily.jpg",
     },
     citrus: {
       title: "Citrus",
       description: "Bright, energizing scents with bergamot, lemon, and orange that invigorate the senses.",
       notes: ["Bergamot", "Lemon", "Orange", "Grapefruit", "Mandarin"],
       mood: "Energizing, Refreshing, Clarifying",
+      image: "https://d2jb2caottkk25.cloudfront.net/nox.boutique/scentguide/scentfamilies/citrusfamily.jpg",
     },
     spice: {
       title: "Spice",
       description: "Rich, complex fragrances with cinnamon, cardamom, and vanilla that create warmth and depth.",
       notes: ["Cinnamon", "Cardamom", "Vanilla", "Clove", "Nutmeg"],
       mood: "Warming, Comforting, Inviting",
+      image: "https://d2jb2caottkk25.cloudfront.net/nox.boutique/scentguide/scentfamilies/spicefamily.jpg",
     },
   };
 
@@ -62,7 +67,7 @@ export default function ScentExploration() {
                 key={family}
                 className={`px-6 py-3 text-sm uppercase tracking-wider font-medium transition-all ${
                   activeTab === family
-                    ? "bg-primary text-white"
+                    ? "bg-primary text-accent"
                     : "bg-white text-primary hover:bg-gray-100"
                 }`}
                 onClick={() => setActiveTab(family)}
@@ -75,7 +80,7 @@ export default function ScentExploration() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="https://d2jb2caottkk25.cloudfront.net/nox.boutique/home/scentexploration/scentguideheader.jpg"
+                src={scentFamilies[activeTab].image}
                 alt={scentFamilies[activeTab].title}
                 className="w-full h-auto rounded-lg shadow-lg"
               />

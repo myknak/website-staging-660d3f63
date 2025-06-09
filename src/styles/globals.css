@@ -6,6 +6,8 @@
   /* Basic colors */
   --color-background: #FFFFFF;
   --color-foreground: #000000;
+  --color-primary: #171717;
+  --color-accent: #D4AF37;
 }
 
 body {
@@ -16,8 +18,51 @@ body {
   overflow-x: hidden;
 }
 
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium transition-all duration-200 rounded-md;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark;
+  }
+  
+  .btn-secondary {
+    @apply bg-white bg-opacity-20 text-white border border-white hover:bg-white hover:bg-opacity-30 backdrop-blur-sm;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  
+  .text-accent {
+    color: var(--color-accent) !important;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.section-padding {
+  padding: 5rem 0;
+}
+
+.container-custom {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }

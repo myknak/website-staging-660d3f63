@@ -64,7 +64,7 @@ export default function ScentFamilies() {
               key={family}
               className={`px-6 py-3 text-sm uppercase tracking-wider font-medium transition-all ${
                 activeFamily === family
-                  ? "bg-primary text-white"
+                  ? "bg-primary text-accent"
                   : "bg-white text-primary hover:bg-gray-100"
               }`}
               onClick={() => setActiveFamily(family)}
