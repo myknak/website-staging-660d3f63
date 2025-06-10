@@ -216,10 +216,10 @@ export default function ScentFinder() {
                       key={q}
                       className={`w-8 h-8 rounded-full flex items-center justify-center ${
                         parseInt(q) === step
-                          ? "bg-primary text-[#D4AF37]" // Changed to gold color for active step
+                          ? "bg-primary text-accent"
                           : parseInt(q) < step
-                          ? "bg-accent text-primary" // Changed to accent background for completed steps
-                          : "bg-gray-200 text-gray-500" // Unchanged for future steps
+                          ? "bg-accent text-primary"
+                          : "bg-gray-200 text-gray-500"
                       }`}
                     >
                       {q}

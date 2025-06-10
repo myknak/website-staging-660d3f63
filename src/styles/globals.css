@@ -38,7 +38,7 @@ body {
   }
   
   .text-accent {
-    color: #D4AF37 !important;
+    color: var(--color-accent) !important;
   }
 }
 
