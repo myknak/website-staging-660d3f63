@@ -85,29 +85,31 @@ export default function ProductPage() {
 
   return (
     <main className="min-h-screen pt-24 pb-16">
-      <div className="container-custom">
-        <div className="mb-6">
-          <Link href="/shop" className="text-sm hover:underline flex items-center gap-2">
-            <span>← Back to Shop</span>
-          </Link>
-        </div>
+      <section className="section-padding pt-20">
+        <div className="container-custom">
+          <div className="mb-6">
+            <Link href="/shop" className="text-sm hover:underline flex items-center gap-2">
+              <span>← Back to Shop</span>
+            </Link>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-          <ProductGallery images={product.images} />
-          <ProductInfo 
-            product={product} 
-            quantity={quantity} 
-            onQuantityChange={handleQuantityChange} 
-            onAddToCart={handleAddToCart} 
-          />
-        </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+            <ProductGallery images={product.images} />
+            <ProductInfo 
+              product={product} 
+              quantity={quantity} 
+              onQuantityChange={handleQuantityChange} 
+              onAddToCart={handleAddToCart} 
+            />
+          </div>
 
-        <ScentProfile scents={product.scents} notes={product.notes} />
-        
-        <BurningInstructions />
-        
-        <ComplementaryProducts products={complementary} />
-      </div>
+          <ScentProfile scents={product.scents} notes={product.notes} />
+          
+          <BurningInstructions />
+          
+          <ComplementaryProducts products={complementary} />
+        </div>
+      </section>
     </main>
   );
 }
