@@ -11,14 +11,7 @@ This template provides a powerful technical foundation for your website. This gu
 - **TypeScript**: JavaScript with type safety for more reliable code
 - **Radix UI**: Accessible, unstyled UI components
 - **Framer Motion & GSAP**: Animation libraries for engaging visual effects
-
-### Why This Stack?
-This combination of technologies provides:
-- **Performance**: Fast load times and smooth interactions
-- **SEO**: Search engine friendly with static generation
-- **Accessibility**: Compliant with accessibility standards
-- **Maintainability**: Modern code patterns for easier updates
-- **Scalability**: Starts simple but can grow with your needs
+- **I18Next**: For multi-languages support
 
 ## How to Customize Your Website
 
@@ -154,21 +147,3 @@ If they use more dynamic animations:
 - Never forget about "use client"
 - Never fuse next/image use img instead
 - Always use `"` for strings in js and ts
-
-## Running & Testing Your Website
-
-### Local Development
-
-```bash
-# Start the development server
-npm run dev
-```
-
-Your site will be available at http://localhost:3000 (or the port you configured).
-
-### Building for Production
-
-```bash
-# Create production build
-npm run build
-```
